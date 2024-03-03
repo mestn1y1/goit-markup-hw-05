@@ -553,11 +553,11 @@ img {
   letter-spacing: 0.04em;
   color: #fff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  padding-left: 16px;
 }
 
 .form-input::placeholder {
   color: #ffffff;
-  padding-left: 16px;
 }
 
 .form-btn {
