@@ -4,6 +4,7 @@
   --icon-bg: #4d5ae5;
   --modal-subtitle: #2e2f42;
   --modal-label-color: #8e8f99;
+  --input-checked-color: #404bbf;
 }
 
 body {
@@ -676,13 +677,14 @@ img {
   background-color: transparent;
   padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
 }
 
 .modal-input:focus {
   border-color: #4d5ae5;
 }
 
-.modal-input:focus .modal-input-img > svg {
+.modal-input:focus + .modal-input-img {
   fill: #4d5ae5;
 }
 
@@ -718,7 +720,7 @@ img {
   border-color: #4d5ae5;
 }
 
-.modal-checkbox {
+.modal-checkbox-privacy {
   margin-bottom: 24px;
 }
 
@@ -737,7 +739,36 @@ img {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-privacy:checked + .label-span-privacy {
+  background-color: var(--input-checked-color);
+  border: none;
+  fill: var(--svg-color);
+}
+
+.privacy-link {
+  color: var(--icon-bg);
+}
+
+.modal-form-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  padding: 16px 32px;
+  /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  outline: transparent; */
 }
